@@ -11,6 +11,6 @@ defmodule KV.Supervisor do
       {KV.Registry, name: KV.Registry}
     ]
 
-    Supervisor.init(children, strategy: :one_for_one)
+    Supervisor.init(children, strategy: :one_for_all)
   end
 end
