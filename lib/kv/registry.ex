@@ -4,6 +4,13 @@ defmodule KV.Registry do
   ## Client API
 
   @doc """
+  Stops the registry.
+  """
+  def stop(server) do
+    GenServer.stop(server)
+  end
+
+  @doc """
   Starts the registry.
   """
   def start_link(opts) do
